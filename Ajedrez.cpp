@@ -36,13 +36,13 @@ public:
 		return (f >= 1 && f <= 8) && (c >= 1 && c <= 8);
 	}
 	
-	// Método para mover la pieza
+	// MÃ©todo para mover la pieza
 	void mover(short f, short c) {
 		if (celValido(f, c)) {
 			fila = f;
 			columna = c;
 		} else {
-			cout << "Movimiento inválido" << endl;
+			cout << "Movimiento invÃ¡lido" << endl;
 		}
 	}
 };
@@ -57,7 +57,7 @@ public:
 		if (getFila() == f || getColumna() == c) {
 			mover(f, c);
 		} else {
-			cout << "Movimiento inválido para una Torre" << endl;
+			cout << "Movimiento invÃ¡lido para una Torre" << endl;
 		}
 	}
 };
@@ -71,12 +71,10 @@ int main() {
 	
 	Torre torre(1, 1);
 	torre.verInfor();
-	
-	// Movemos la torre a una posición válida
 	torre.avanzar(1, 5);
 	torre.verInfor();
 	
-	// Intentamos un movimiento inválido
+	//  movimiento invÃ¡lido
 	torre.avanzar(2, 6);
 	torre.verInfor();
 	
